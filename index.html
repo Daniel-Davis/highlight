@@ -10,15 +10,15 @@ var languages = {
   javascript: /\b(function|return|var)\b/g /* ... etc */
 };
 
-function highlightAllCode() {
-  var pres = document.body.getElementsByTagName("pre");
-  for (var i = 0; i < pres.length; i++) {
-    var pre = pres[i];
-    var lang = pre.getAttribute("data-language");
-    if (languages.hasOwnProperty(lang))
-      highlightCode(pre, languages[lang]);
-  }
-}
+function highlightAllCode() { // starts function highlightAllCode
+  var pres = document.body.getElementsByTagName("pre"); // variable that gets elements with pre in it's name
+  for (var i = 0; i < pres.length; i++) { // for loop that goes through as many times as as the lingth of pres
+    var pre = pres[i]; // variable to hold the value of each element from the array
+    var lang = pre.getAttribute("data-language"); // variable to hold the data-language from said element
+    if (languages.hasOwnProperty(lang)) // if that vaiable has the property of lang
+      highlightCode(pre, languages[lang]); // highlights the code
+  } // end of for loop
+} // end of function
 </script>
 </head>
 <body>
