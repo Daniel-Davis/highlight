@@ -7,7 +7,7 @@ Javascript Syntax Highlighter
 
 <script type="text/javascript">
 var languages = {
-  javascript: /\b(function|return|var)\b/g /* ... etc */
+  javascript: /\b(function|return|var|zombie|Capouch)\b/g /* ... etc */
 };
 
 function highlightAllCode() { // starts function highlightAllCode
@@ -17,10 +17,6 @@ function highlightAllCode() { // starts function highlightAllCode
     var lang = pre.getAttribute("data-language"); // variable to hold the attribute data-language from said variable array
     if (languages.hasOwnProperty(lang)) // if that vaiable has the property of lang
       highlightCode(pre, languages[lang]); // highlights the code
-    if (languages.hasOwnProperty(zombie)) // adds another keyword for zombies
-      highlightCode(pre, languages[zombie]);
-    if (languages.hasOwnProperty(ice cream)) // and ice cream
-      highlightCode(pre, languages[ice cream]);
   } // end of for loop
 } // end of function
 </script>
