@@ -14,9 +14,13 @@ function highlightAllCode() { // starts function highlightAllCode
   var pres = document.body.getElementsByTagName("pre"); // variable that gets elements with pre in it's name
   for (var i = 0; i < pres.length; i++) { // for loop that goes through as many times as as the lingth of pres
     var pre = pres[i]; // variable to hold the value of each element from the array
-    var lang = pre.getAttribute("data-language"); // variable to hold the data-language from said element
+    var lang = pre.getAttribute("data-language"); // variable to hold the attribute data-language from said variable array
     if (languages.hasOwnProperty(lang)) // if that vaiable has the property of lang
       highlightCode(pre, languages[lang]); // highlights the code
+    if (languages.hasOwnProperty(zombie)) // adds another keyword for zombies
+      highlightCode(pre, languages[zombie]);
+    if (languages.hasOwnProperty(ice cream)) // and ice cream
+      highlightCode(pre, languages[ice cream]);
   } // end of for loop
 } // end of function
 </script>
